@@ -12,5 +12,7 @@
  echo i love Git >> greeting.txt
  git add greeting.txt
  git commit -m "Added i love git"
-
-
+ git switch main
+ git merge -m"first merge" intro
+ git tag -a v1
+ git push origin v1
