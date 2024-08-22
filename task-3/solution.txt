@@ -9,16 +9,17 @@ touch system.log error.log file1.pdf file2.pdf
 cd ..
 cd data
 touch data.csv info.txt
-nano report1.md
-nano system.log
-nano data.csv
+nano ~/project_files/reports/report1.md
+nano ~/project_files/logs/system.log
+nano ~/project_files/data/data.csv
 cd ..
-tar -cf logs_backup.tar logs
-mv logs_backup.tar ~/project_files/
 cd logs
+tar -cf logs_backup.tar system.log error.log file1.pdf file2.pdf
+mv logs_backup.tar ~/project_files/
 tar -xvf ~/project_files/logs_backup.tar
 find ~ -name "*.md"
 find ~/project_files/ -name "*.log" 
+find ~/project_files/ -name file1.pdf 
 find ~/project_files/ -iname "*.pdf" 
 find ~/project_files/logs -type f
 cd ..
