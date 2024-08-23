@@ -11,5 +11,5 @@ sudo groupdel newgroup
 sudo userdel -r newuser
 sudo apt update
 sudo apt install lolcat
-echo "i love OSC" | tee -a lolcat
+echo "i love OSC" | tee lolcat
 sudo apt remove lolcat
